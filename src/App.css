@@ -1,0 +1,6 @@
+.App .Cards {
+    display: flex;
+    flex-wrap: wrap; /* para quebrar a linha*/
+    justify-content: center;
+
+}
