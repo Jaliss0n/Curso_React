@@ -11,6 +11,10 @@ import './App.css'
 import TabelaProdutos from "./components/repeticao/TabelaProdutos"
 import ParOuImpar from "./components/condicional/ParOuImpar"
 import UsuarioInfo from "./components/condicional/UsuarioInfo"
+import DiretaPai from "./components/comunicacao/DiretaPai"
+import IndiretaPai from "./components/comunicacao/IndiretaPai"
+import Input from "./components/formulario/Input"
+import Contador from "./components/contador/Contador"
 
 export default () => {
     return (
@@ -20,10 +24,24 @@ export default () => {
 
             <div className="Cards">
 
+                <Card titulo="#12 Contador" color="#424242">
+                    <Contador numeroInicial={10}/>
+                </Card>
+
+                <Card titulo="#11 Componente Controlado (Input)" color="#E45F56">
+                    <Input />
+                </Card>
+
+                <Card titulo="#10 Comunicação Indireta" color="#8BAD39">
+                    <IndiretaPai />
+                </Card>
+
+
+                <Card titulo="#09 Comunicação Direta" color="#59323C">
+                    <DiretaPai />
+                </Card>
+
                 <Card titulo="#08 Renderizaçao Condicional" color="#982395">
-                    <ParOuImpar numero={19}/>
-                    <UsuarioInfo usuario={{nome: 'Fernando'}}/>
-                    <UsuarioInfo usuario={{email: 'fer@nando.com'}}/>
 
                 </Card>
 
