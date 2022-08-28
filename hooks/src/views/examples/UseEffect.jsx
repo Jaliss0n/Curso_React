@@ -9,11 +9,6 @@ function calcFatorial(num) {
     return calcFatorial(n - 1) * n
 }
 
-function calcImparPar(n) {
-    const resultado =  n % 2 === 0 ? 'Par' : 'Impar'
-    return resultado
-}
-
 
 const UseEffect = (props) => { //Use Effect se trata de laterar um efeito colateral
     
@@ -21,12 +16,11 @@ const UseEffect = (props) => { //Use Effect se trata de laterar um efeito colate
     const [fatorial, setFatorial] = useState(1)
 
     //////////////////////////////////////////////////
-    const [num, setNum] = useState(1)
     const [impPar, setImparPar] = useState()
 
     useEffect(function(){
-        setImparPar(calcImparPar(num))
-    },num)
+        setImparPar( number % 2 === 0 ? 'Par' : 'Impar' )
+    },[number])
 
 
 
@@ -68,9 +62,7 @@ const UseEffect = (props) => { //Use Effect se trata de laterar um efeito colate
                     <span className="text">Situação: </span>
                     <span className="text red">{impPar}</span>
                 </div>
-                <input type="number" className="text" 
-                    value={num} onChange={e => setNum(e.target.value)}
-                />
+                
             </div>
 
             
